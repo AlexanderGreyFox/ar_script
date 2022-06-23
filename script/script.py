@@ -22,7 +22,7 @@ def api_request(date: datetime.date, first_currency: str, second_currency: str) 
 
 
 def main():
-    pdf = PdfPages("../Exchange_rate_example.pdf")
+    pdf = PdfPages("../Exchange_rate.pdf")
     base = datetime.datetime.date(datetime.datetime.today())
     date_list = [base - datetime.timedelta(days=x) for x in range(30)]
     ex_dict = {}
