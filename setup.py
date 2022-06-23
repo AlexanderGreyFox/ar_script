@@ -9,7 +9,7 @@ if os.path.isfile(requirement_path):
     with open(requirement_path) as f:
         install_requires = f.read().splitlines()
 setup(
-    name='Exchange_script',
+    name='exchange_rates',
     version='0.1.0',
     author='Serov Aleksandr',
     author_email='alexserov0@gmail.com',
@@ -17,4 +17,7 @@ setup(
     description='A script that receives data on exchange rates for the last 30 days and builds a graph based on them.',
     long_description=open('README.md').read(),
     install_requires=install_requires,
+    entry_points={
+                  'console_scripts': ['exchange_rates=script.script:main'],
+                  },
 )
